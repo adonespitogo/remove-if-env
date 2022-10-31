@@ -1,6 +1,6 @@
 {
   "name": "@adopisoft/remove-if-env",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Remove blocks of code base on Nodes.js' process.env",
   "main": "./dist/index.js",
   "type": "commonjs",
@@ -20,9 +20,9 @@
   "author": "AdoPiSoft <support@adopisoft.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AdoPiSoft/ts-if-env/issues"
+    "url": "https://github.com/AdoPiSoft/remove-if-env/issues"
   },
-  "homepage": "https://github.com/AdoPiSoft/ts-if-env#readme",
+  "homepage": "https://github.com/AdoPiSoft/remove-if-env#readme",
   "peerDependencies": {
     "ts-node": "^10.9.1",
     "ttypescript": "^1.5.13"
