@@ -8,7 +8,9 @@ This is a [ttypescript](https://www.npmjs.com/package/typescript) plugin that re
 
 ## Status
 
-This project is very much still a WIP, enough for our internal tooling requirements. But we will follow proper semantic versioning to avoid breaking changes. PRs are always welcome if you want to improve this tool.
+This project is very much still a WIP, enough for our internal tooling requirements. 
+But we will follow proper semantic versioning to avoid breaking changes. 
+PRs are always welcome if you want to improve this tool.
 
 ## Installation
 
@@ -48,7 +50,9 @@ yarn add @adopisoft/remove-if-env -D
 `./sample-source.ts`
 
 ```js
-import removeIfEnv from './remove-if-env' // NOTE: This variable name 'removeIfEnv' must match the value of plugin option 'envVar'.
+
+// NOTE: This variable name 'removeIfEnv' must match the value of plugin option 'envVar'.
+import removeIfEnv from './remove-if-env'
 
 if (removeIfEnv.NODE_ENV === 'production') {
   console.log('This block will be removed in production!')
