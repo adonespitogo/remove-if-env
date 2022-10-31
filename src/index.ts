@@ -1,5 +1,6 @@
 import * as ts from 'typescript'
-import pkg from '@adopisoft/remove-if-env/package.json'
+
+import pkg from '../package.json'
 
 interface PluginOptions {
   envVar?: string

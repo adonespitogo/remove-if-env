@@ -2,7 +2,7 @@
   "name": "@adopisoft/remove-if-env",
   "version": "0.0.8",
   "description": "Remove blocks of code base on Nodes.js' process.env",
-  "main": "./dist/index.js",
+  "main": "./dist/src/index.js",
   "type": "commonjs",
   "scripts": {
     "postinstall": "npx tsc",
