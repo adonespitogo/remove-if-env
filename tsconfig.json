@@ -1,0 +1,11 @@
+{
+  "files": [
+    "index.ts"
+  ],
+  "compilerOptions": {
+    "outDir": "dist",
+    "declaration": true,
+    "declarationMap": true,
+    "strictNullChecks": true
+  }
+}
