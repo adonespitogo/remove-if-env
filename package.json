@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/AdoPiSoft/ts-if-env/issues"
   },
-  "homepage": "https://github.com/AdoPiSoft/ts-if-env#readme"
+  "homepage": "https://github.com/AdoPiSoft/ts-if-env#readme",
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "ttypescript": "^1.5.13"
+  }
 }
