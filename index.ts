@@ -15,20 +15,20 @@ export default function (program: ts.Program, pluginOptions: PluginOptions = {})
     return (sourceFile: ts.SourceFile) => {
       function visitor (node: ts.Node): ts.Node {
         if (ts.isIfStatement(node)
-            && ts.isBinaryExpression(node.expression)
-            && eqlTokens.includes(node.expression.operatorToken.getFullText())
-           ) {
-          const expression = node.expression
-          const leftExp = expression.left.getFullText()
-          const rightExp = expression.right.getFullText().replace(/"|'/g, '').trim()
-          const envIndex = envFields.indexOf(leftExp)
-          if (envIndex > -1) {
-            const envField = optFields[envIndex]
-            const optValue = process.env[envField]
-            if (optValue === rightExp) {
-              return ts.factory.createIdentifier(`/*${stars}\n\t${signature}\n**${stars}\n\n${node.getFullText()}\n*/`)
+          && ts.isBinaryExpression(node.expression)
+          && eqlTokens.includes(node.expression.operatorToken.getFullText().trim())
+        ) {
+            const expression = node.expression
+            const leftExp = expression.left.getFullText()
+            const rightExp = expression.right.getFullText().replace(/"|'/g, '').trim()
+            const envIndex = envFields.indexOf(leftExp)
+            if (envIndex > -1) {
+              const envField = optFields[envIndex]
+              const optValue = process.env[envField]
+              if (optValue === rightExp) {
+                return ts.factory.createIdentifier(`/*${stars}\n\t${signature}\n**${stars}\n\n${node.getFullText()}\n*/`)
+              }
             }
-          }
         }
         return ts.visitEachChild(node, visitor, ctx)
       }

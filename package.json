@@ -4,14 +4,8 @@
   "description": "Remove blocks of code base on Nodes.js' process.env",
   "main": "./dist/index.js",
   "type": "commonjs",
-  "exports": {
-    ".": {
-      "import": "./index.ts",
-      "require": "./dist/index.js"
-    }
-  },
   "scripts": {
-    "postinstall": "./node_modules/.bin/tsc",
+    "postinstall": "npx tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
