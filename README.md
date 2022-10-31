@@ -48,7 +48,7 @@ yarn add @adopisoft/remove-if-env -D
 `./sample-source.ts`
 
 ```js
-import removeIfEnv from './remove-if-env'
+import removeIfEnv from './remove-if-env' // NOTE: This variable name 'removeIfEnv' must match the value of plugin option 'envVar'.
 
 if (removeIfEnv.NODE_ENV === 'production') {
   console.log('This block will be removed in production!')
