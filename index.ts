@@ -1,14 +1,13 @@
 import * as ts from 'typescript'
 
 interface PluginOptions {
-  env?: []
+  envVar?: string
 }
 
-export default function (program: ts.Program, pluginOptions: PluginOptions = {}): any {
+export default function (program: ts.Program, opts?: PluginOptions): any {
+  const envVar = opts?.envVar ?? 'removeIfEnv'
   const signature = 'Removed by @adopisoft/ts-if-env'
   const stars = '************************'
-  const optFields = pluginOptions.env ?? []
-  const envFields = optFields.map(k => `process.env.${k}`)
   const eqlTokens = ['===', '==']
 
   return (ctx: ts.TransformationContext) => {
@@ -19,11 +18,10 @@ export default function (program: ts.Program, pluginOptions: PluginOptions = {})
           && eqlTokens.includes(node.expression.operatorToken.getFullText().trim())
         ) {
             const expression = node.expression
-            const leftExp = expression.left.getFullText()
+            const leftExp = expression.left.getFullText().trim()
             const rightExp = expression.right.getFullText().replace(/"|'/g, '').trim()
-            const envIndex = envFields.indexOf(leftExp)
-            if (envIndex > -1) {
-              const envField = optFields[envIndex]
+            if (leftExp.indexOf(envVar) > -1) {
+              const envField = leftExp.replace(`${envVar}.`, '')
               const optValue = process.env[envField]
               if (optValue === rightExp) {
                 return ts.factory.createIdentifier(`/*${stars}\n\t${signature}\n**${stars}\n\n${node.getFullText()}\n*/`)
