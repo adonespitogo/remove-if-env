@@ -1,6 +1,6 @@
 {
   "name": "@adopisoft/ts-if-env",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Remove blocks of code base on Nodes.js' process.env",
   "main": "./dist/index.js",
   "type": "commonjs",
@@ -11,7 +11,7 @@
     }
   },
   "scripts": {
-    "postinstall": "tsc",
+    "postinstall": "./node_modules/.bin/tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
