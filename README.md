@@ -57,7 +57,10 @@ if (removeIfEnv.NODE_ENV === 'production') {
 
 `./remove-if-env.ts`
 ```js
-/* Use this file to prevent linting error for undefined variable 'removeIfEnv' and provide code completion. */
+/* 
+Use this file to prevent linting error for undefined variable 'removeIfEnv' 
+and provide code completion. 
+*/
 
 export default {
   NODE_ENV: process.env.NODE_ENV
