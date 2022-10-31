@@ -1,0 +1,24 @@
+{
+  "name": "@adopisoft/ts-if-env",
+  "version": "0.0.1",
+  "description": "Remove blocks of code base on Nodes.js' process.env",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdoPiSoft/ts-if-env.git"
+  },
+  "keywords": [
+    "typescript",
+    "debug",
+    "remove-code"
+  ],
+  "author": "AdoPiSoft <support@adopisoft.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AdoPiSoft/ts-if-env/issues"
+  },
+  "homepage": "https://github.com/AdoPiSoft/ts-if-env#readme"
+}
