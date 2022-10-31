@@ -1,6 +1,6 @@
 {
   "name": "@adopisoft/remove-if-env",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Remove blocks of code base on Nodes.js' process.env",
   "main": "./dist/index.js",
   "type": "commonjs",

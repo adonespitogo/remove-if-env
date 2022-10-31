@@ -10,6 +10,7 @@
       "es2021"
     ],
     "moduleResolution": "node16",
+    "resolveJsonModule": true,
     "esModuleInterop": true,
     "declaration": true,
     "declarationMap": true,

@@ -1,4 +1,5 @@
 import * as ts from 'typescript'
+import pkg from './package.json'
 
 interface PluginOptions {
   envVar?: string
@@ -6,7 +7,7 @@ interface PluginOptions {
 
 export default function (program: ts.Program, opts?: PluginOptions): any {
   const envVar = opts?.envVar ?? 'removeIfEnv'
-  const signature = 'Removed by @adopisoft/ts-if-env'
+  const signature = 'Removed by ' + pkg.name
   const stars = '************************'
   const eqlTokens = ['===', '==']
 
