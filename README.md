@@ -1,12 +1,11 @@
 # @adopisoft/remove-if-env
 
 A `typescript` transform plugin that removes blocks of code base on Nodes.js' `process.env`.
+Compatible with [ts-patch](https://github.com/nonara/ts-patch)(recommended) and [ttypescript](https://github.com/cevek/ttypescript/tree/master/packages/ttypescript)
 
 ---
 
 ## Installation
-
-Requires `ts-node` and `ttypescript` to be installed.
 
 With NPM:
 ```
@@ -90,7 +89,7 @@ $ npx ttsc
 For now, the `import removeIfEnv from ./remove-if-env` import statement will not be stripped off in production
 and will remain as an unused variable in the file output.
 
-This can be fixed by using additional javascript preprocessors like babel, terser or gulp. But the long term solution for this would be to 
+This can be fixed by using additional javascript preprocessors like babel, terser or gulp. But the long term solution for this would be to
 remove the import statement in the AST within the transform plugin itself.
 
 ## Project Status
