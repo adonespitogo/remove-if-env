@@ -87,7 +87,13 @@ $ export PROD=1
 $ npx ttsc
 ```
 
+## Caveats
 
+For now, the `import removeIfEnv from ./remove-if-env` import statement will not be stripped off in production
+and will remain as an unused variable in the file output.
+
+This can be fixed by using additional javascript preprocessors like babel, terser or gulp. But the long term solution for this would be to 
+remove the import statement in the AST within the transform plugin itself.
 
 ## Project Status
 
