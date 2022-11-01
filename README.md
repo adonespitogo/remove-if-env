@@ -57,9 +57,9 @@ if (removeIfEnv.PROD) {
 ```
 
 
-## Creating the `removeIfEnv` file
+## Creating the `remove-if-env.ts` file
 
-The `removeIfEnv` file is used for your local typescript completion only and to make sure the codes inside the if statement can execute locally. To do this, we have to create the file `./remove-if-env.ts` which contains placeholder values for the `process.env.*` properties:
+The `remove-if-env.ts` file is used for your local typescript completion only and to make sure the codes inside the if statement can execute locally. To do this, we have to create this file which contains placeholder values for the `process.env.*` properties:
 
 `./remove-if-env.ts`
 
