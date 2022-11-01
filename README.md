@@ -51,7 +51,7 @@ import removeIfEnv from './remove-if-env'
 if (removeIfEnv.PROD) {
   console.log(
     'This code block executes in development but will be striped out \
-      when compiling with PROD=true ttsc'
+      when compiling with PROD=true tsc'
   )
 }
 ```
@@ -83,7 +83,7 @@ export default {
 To strip off the if statement blocks during compilation, we must set the environment variables to one of the following values - `1`, `yes`, or `true`.
 ```
 $ export PROD=1
-$ npx ttsc
+$ npx tsc
 ```
 
 ## Caveats
