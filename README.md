@@ -72,8 +72,11 @@ export default {
 ## Plugin Options
 
 **envVar** - Set the variable name of `removeIfEnv` object to be used in your codes. If not set, default is `removeIfEnv`.
-Your code must use this variable name when importing `remove-if-env.ts` file.
+Your code must use this variable name when importing `remove-if-env.ts` file. Example:
 
+```js
+import removeIfEnv from './remove-if-env'`
+```
 
 
 ## Compiling Your Code
