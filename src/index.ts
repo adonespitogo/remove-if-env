@@ -1,31 +1,24 @@
 import * as ts from 'typescript'
 
-import pkg from '../package.json'
-
 interface PluginOptions {
   envVar?: string
 }
 
 export default function (program: ts.Program, opts?: PluginOptions): any {
   const envVar = opts?.envVar ?? 'removeIfEnv'
-  const signature = 'Removed by ' + pkg.name
+  const signature = 'Removed by @adopisoft/remove-if-env'
   const stars = '************************'
-  const eqlTokens = ['===', '==']
+  const trueValues = ['1', 'yes', 'true']
 
   return (ctx: ts.TransformationContext) => {
     return (sourceFile: ts.SourceFile) => {
       function visitor (node: ts.Node): ts.Node {
-        if (ts.isIfStatement(node)
-          && ts.isBinaryExpression(node.expression)
-          && eqlTokens.includes(node.expression.operatorToken.getFullText().trim())
-        ) {
-            const expression = node.expression
-            const leftExp = expression.left.getFullText().trim()
-            const rightExp = expression.right.getFullText().replace(/"|'/g, '').trim()
-            if (leftExp.indexOf(envVar) > -1) {
-              const envField = leftExp.replace(`${envVar}.`, '')
-              const optValue = process.env[envField]
-              if (optValue === rightExp) {
+        if (ts.isIfStatement(node)) {
+            const ifStatement = node.expression.getFullText().trim()
+            if (ifStatement.indexOf(envVar) > -1) {
+              const envField = ifStatement.replace(`${envVar}.`, '')
+              const yes = trueValues.includes(process.env[envField] ?? '')
+              if (yes) {
                 return ts.factory.createIdentifier(`/*${stars}\n\t${signature}\n**${stars}\n\n${node.getFullText()}\n*/`)
               }
             }
