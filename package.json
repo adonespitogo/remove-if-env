@@ -1,7 +1,7 @@
 {
   "name": "@adopisoft/remove-if-env",
   "version": "0.1.0",
-  "description": "Remove blocks of code base on Nodes.js' process.env",
+  "description": "A typescript transform plugin that removes blocks of code base on Nodes.js' process.env",
   "main": "./dist/index.js",
   "type": "commonjs",
   "scripts": {
