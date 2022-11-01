@@ -68,6 +68,8 @@ export default {
 }
 ```
 
+You can have as many env properties as you need.
+
 
 ## Plugin Options
 
