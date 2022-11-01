@@ -26,9 +26,6 @@ yarn add @adopisoft/remove-if-env -D
 
 ```json
 {
-  "ts-node": {
-    "compiler": "ttypescript"
-  },
   "compilerOptions": {
     "plugins": [
       {
@@ -72,10 +69,10 @@ export default {
 ```
 
 
-
 ## Plugin Options
 
 **envVar** - Set the variable name of `removeIfEnv` object to be used in your codes. If not set, default is `removeIfEnv`.
+Your code must use this variable name when importing `remove-if-env.ts` file.
 
 
 
