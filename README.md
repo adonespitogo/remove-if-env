@@ -1,8 +1,6 @@
 # @adopisoft/remove-if-env
 
-Remove blocks of code base on Nodes.js' process.env
-
-This is a [ttypescript](https://www.npmjs.com/package/typescript) plugin that removes block of codes base on `process.env`.
+A `typescript` transform plugin that removes blocks of code base on Nodes.js' `process.env`.
 
 ---
 
