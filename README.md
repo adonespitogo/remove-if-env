@@ -12,13 +12,11 @@ Requires `ts-node` and `ttypescript` to be installed.
 
 With NPM:
 ```
-
 npm i @adopisoft/remove-if-env --save-dev
 ```
+
 OR with YARN:
 ```
-# Requires 'ts-node' and 'ttypescript' to be installed
-
 yarn add @adopisoft/remove-if-env -D
 ```
 
