@@ -67,7 +67,8 @@ The `removeIfEnv` file is used for your local typescript completion only and to 
 ```js
 
 export default {
-  PROD: true
+  PROD: true,
+  SOME_OTHER_ENV: true
 }
 ```
 
